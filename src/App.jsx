@@ -36,7 +36,7 @@ export default function App() {
 
       setTimeout(() => {
         window.location.href = "/tesekkur";
-      }, 2000);
+      }, 1800);
     } catch (error) {
       alert("Bir hata oluştu. Lütfen tekrar deneyin.");
       setLoading(false);
@@ -69,7 +69,7 @@ export default function App() {
         >
           <h1
             style={{
-              fontSize: "42px",
+              fontSize: "40px",
               marginTop: 0,
               marginBottom: "18px",
               lineHeight: "1.2",
@@ -80,8 +80,8 @@ export default function App() {
 
           <p
             style={{
-              fontSize: "22px",
-              marginBottom: "16px",
+              fontSize: "21px",
+              marginBottom: "12px",
               color: "#222",
             }}
           >
@@ -90,13 +90,17 @@ export default function App() {
 
           <p
             style={{
-              fontSize: "18px",
-              color: "#555",
-              marginBottom: 0,
+              fontSize: "17px",
+              color: "#666",
+              marginBottom: "24px",
             }}
           >
             Telefonunuz açık olsun 🙂
           </p>
+
+          <a href="/" style={secondaryButtonStyle}>
+            Ana sayfaya dön
+          </a>
         </div>
       </div>
     );
@@ -128,7 +132,7 @@ export default function App() {
         >
           <h1
             style={{
-              fontSize: "36px",
+              fontSize: "34px",
               marginTop: 0,
               marginBottom: "14px",
               lineHeight: "1.2",
@@ -144,7 +148,7 @@ export default function App() {
               marginBottom: "12px",
             }}
           >
-            Size en uygun seçenekler hesaplanıyor.
+            Bilgileriniz alındı, size uygun seçenekler kontrol ediliyor.
           </p>
 
           <p
@@ -172,7 +176,7 @@ export default function App() {
     >
       <div
         style={{
-          maxWidth: "560px",
+          maxWidth: "580px",
           margin: "0 auto",
           backgroundColor: "white",
           borderRadius: "16px",
@@ -185,7 +189,7 @@ export default function App() {
             margin: 0,
             fontSize: "13px",
             fontWeight: "bold",
-            letterSpacing: "0.5px",
+            letterSpacing: "0.6px",
           }}
         >
           INSULEAD
@@ -196,7 +200,7 @@ export default function App() {
             fontSize: "38px",
             lineHeight: "1.1",
             marginTop: "14px",
-            marginBottom: "14px",
+            marginBottom: "12px",
           }}
         >
           En uygun sigorta teklifine hızlıca ulaşın
@@ -204,8 +208,8 @@ export default function App() {
 
         <p
           style={{
-            fontSize: "18px",
-            color: "#444",
+            fontSize: "16px",
+            color: "#555",
             lineHeight: "1.5",
             marginBottom: "24px",
           }}
@@ -222,38 +226,9 @@ export default function App() {
             marginBottom: "22px",
           }}
         >
-          <span
-            style={{
-              backgroundColor: "#f1f1f1",
-              padding: "8px 12px",
-              borderRadius: "999px",
-              fontSize: "13px",
-            }}
-          >
-            Ücretsiz ön değerlendirme
-          </span>
-
-          <span
-            style={{
-              backgroundColor: "#f1f1f1",
-              padding: "8px 12px",
-              borderRadius: "999px",
-              fontSize: "13px",
-            }}
-          >
-            Hızlı geri dönüş
-          </span>
-
-          <span
-            style={{
-              backgroundColor: "#f1f1f1",
-              padding: "8px 12px",
-              borderRadius: "999px",
-              fontSize: "13px",
-            }}
-          >
-            Telefonda destek
-          </span>
+          <span style={badgeStyle}>Ücretsiz ön değerlendirme</span>
+          <span style={badgeStyle}>Hızlı geri dönüş</span>
+          <span style={badgeStyle}>Telefonda destek</span>
         </div>
 
         <form
@@ -305,12 +280,25 @@ export default function App() {
           </button>
         </form>
 
+        <a href="tel:05XXXXXXXXX" style={phoneLinkStyle}>
+          📞 Hemen arayın
+        </a>
+
+        <a
+          href="https://wa.me/905XXXXXXXXX"
+          target="_blank"
+          rel="noreferrer"
+          style={whatsappLinkStyle}
+        >
+          💬 WhatsApp’tan yazın
+        </a>
+
         <p
           style={{
             fontSize: "13px",
             color: "#666",
             lineHeight: "1.5",
-            marginTop: "16px",
+            marginTop: "18px",
             marginBottom: 0,
           }}
         >
@@ -321,6 +309,13 @@ export default function App() {
     </div>
   );
 }
+
+const badgeStyle = {
+  backgroundColor: "#f1f1f1",
+  padding: "8px 12px",
+  borderRadius: "999px",
+  fontSize: "13px",
+};
 
 const inputStyle = {
   width: "100%",
@@ -342,4 +337,32 @@ const buttonStyle = {
   border: "none",
   borderRadius: "10px",
   cursor: "pointer",
+};
+
+const phoneLinkStyle = {
+  display: "block",
+  marginTop: "16px",
+  textAlign: "center",
+  color: "#111",
+  fontWeight: "bold",
+  textDecoration: "none",
+};
+
+const whatsappLinkStyle = {
+  display: "block",
+  marginTop: "10px",
+  textAlign: "center",
+  color: "#128c7e",
+  fontWeight: "bold",
+  textDecoration: "none",
+};
+
+const secondaryButtonStyle = {
+  display: "inline-block",
+  padding: "12px 18px",
+  borderRadius: "10px",
+  backgroundColor: "black",
+  color: "white",
+  textDecoration: "none",
+  fontWeight: "bold",
 };
