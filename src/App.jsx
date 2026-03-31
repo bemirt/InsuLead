@@ -280,12 +280,12 @@ export default function App() {
           </button>
         </form>
 
-        <a href="tel:05XXXXXXXXX" style={phoneLinkStyle}>
+        <a href="tel:05050727306" style={phoneLinkStyle}>
           📞 Hemen arayın
         </a>
 
         <a
-          href="https://wa.me/905XXXXXXXXX"
+          href="https://wa.me/905050727306"
           target="_blank"
           rel="noreferrer"
           style={whatsappLinkStyle}
